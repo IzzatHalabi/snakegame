@@ -35,15 +35,11 @@ public class GameObject {
         SnakeTail tail = new SnakeTail(new Position(1*OBJECT_SCALE, 1*OBJECT_SCALE), OBJECT_DIMENSION);
         SnakeTail tail2 = new SnakeTail(new Position(1*OBJECT_SCALE, 1*OBJECT_SCALE), OBJECT_DIMENSION);
         SnakeTail tail3 = new SnakeTail(new Position(1*OBJECT_SCALE, 1*OBJECT_SCALE), OBJECT_DIMENSION);
-        SnakeTail tail4 = new SnakeTail(new Position(1*OBJECT_SCALE, 1*OBJECT_SCALE), OBJECT_DIMENSION);
-        SnakeTail tail5 = new SnakeTail(new Position(1*OBJECT_SCALE, 1*OBJECT_SCALE), OBJECT_DIMENSION);
-        SnakeTail tail6 = new SnakeTail(new Position(1*OBJECT_SCALE, 1*OBJECT_SCALE), OBJECT_DIMENSION);
-        SnakeTail tail7 = new SnakeTail(new Position(1*OBJECT_SCALE, 1*OBJECT_SCALE), OBJECT_DIMENSION);
-        snake = new Snake(head, tail, tail2, tail3, tail4, tail5, tail6, tail7);
+        snake = new Snake(head, tail, tail2, tail3);
 
         apple = new Apple(new Position(4*OBJECT_SCALE, 1*OBJECT_SCALE), OBJECT_DIMENSION);
 
-        List<Collidable> collidableList = Arrays.asList(head, tail, tail2, tail3, tail4, tail5, tail6, tail7, apple);
+        List<Collidable> collidableList = Arrays.asList(head, tail, tail2, tail3, apple);
         collisionManager = new GameCollisionManager(collidableList);
 
         isRunning = true;
